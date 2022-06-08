@@ -11,7 +11,7 @@ function multiply(x, y) {
 }
 
 function badAdd(x, y) {
-  const sum = x + y;
+  const sum = x + x;
 }
 
 const x = 1;
