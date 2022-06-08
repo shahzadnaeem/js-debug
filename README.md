@@ -11,6 +11,7 @@ While you are running line by line, you have the ability to examine the values o
 - Documentation Links
   - [VScode Debugging Guide](https://code.visualstudio.com/docs/editor/debugging)
   - [VSCode Node Debugging](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+  - [VSCode Browser Debugging](https://code.visualstudio.com/docs/nodejs/browser-debugging)
 
 ## Node.js Debugging
 
