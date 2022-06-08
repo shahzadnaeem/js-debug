@@ -1,8 +1,18 @@
 # Debugging
 
-## VSCode Terminal Auto Attach
+VSCode has powerful debugging support that allows you to step through your code on a line by line bases when it runs.
 
-Docs link - [VSCode Node Debugging](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+More usefully, you can set a `breakpoint` on a specific line of code that will cause the debugger to run your code until that line is reached and then it will allow you to run it line by line from that point.
+
+While you are running line by line, you have the ability to examine the values of variables to try and understand how your program is executing - usually in cases when it does not do what you expect!
+
+- Documentation Links
+  - [VScode Debugging Guide](https://code.visualstudio.com/docs/editor/debugging)
+  - [VSCode Node Debugging](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+
+## TODO: Overview of how to Debug and sort out following 'guide'
+
+## VSCode Terminal Auto Attach
 
 VSCode has a feature that automatically attaches a debugger to any node scripts that are run from it.
 
@@ -32,5 +42,13 @@ VSCode has a feature that automatically attaches a debugger to any node scripts 
   - Open the script that you want to run and set a breakpoint before you start the script in the Terminal
 
     ```text
-    node ./debug.js
+    node ./src/debug.js
+
+    or
+
+    node ./src/averages.js
     ```
+
+## TODO: Creating Debug Configurations
+
+## TODO: How to add Breakpoints and use Debugger Features
