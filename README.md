@@ -13,6 +13,10 @@ While you are running line by line, you have the ability to examine the values o
   - [VSCode Node Debugging](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
   - [VSCode Browser Debugging](https://code.visualstudio.com/docs/nodejs/browser-debugging)
 
+## Important Note
+
+Please ensure that you restart VSCode in the correct directory below when you are trying out debugging for either `node` or `browser`. If you do not, debugging may not work correctly
+
 ## Node.js Debugging
 
 The `node` directory has examples of how to debug Javascript and Jasmine tests that are run using node.js
