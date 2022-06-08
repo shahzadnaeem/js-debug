@@ -7,12 +7,26 @@ const nextIdEl = document.querySelector("#next-id");
 // This increases every time a CRUD operation occurs
 let renderCount = 1;
 
-// We have a predefined set of todos!
+const TODOS_LS_ITEM_KEY = "todos";
+
+// We have a predefined set of todos - unless we got some from local storage
 let todos = [
   { id: 1, title: "Feed the cat", completed: true },
   { id: 2, title: "Cut the grass", completed: false },
   { id: 3, title: "Fix the leaky roof!", completed: false },
 ];
+
+const localStorageTodos = localStorage.getItem(TODOS_LS_ITEM_KEY);
+
+if (localStorageTodos) {
+  try {
+    todos = JSON.parse(localStorageTodos);
+  } catch (e) {
+    // Broken JSON in local storage, so clear!
+    console.log("Bad TODOs in local storage - clearing and using defaults!");
+    localStorage.clear(TODOS_LS_ITEM_KEY);
+  }
+}
 
 let nextId = Math.max(...todos.map((obj) => obj.id)) + 1;
 
@@ -107,6 +121,9 @@ function setStats() {
 }
 
 function render() {
+  // We save to local storage on every render - could do better :-O
+  localStorage.setItem(TODOS_LS_ITEM_KEY, JSON.stringify(todos));
+
   clearTodosList();
 
   todos.forEach((todo) => {
